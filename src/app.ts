@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(xss());
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
   res.send("<h1>Jobs API</h1>");
 });
 app.use("/api/v1/auth", authRouter);
